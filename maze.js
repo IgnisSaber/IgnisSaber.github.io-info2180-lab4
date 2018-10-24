@@ -1,5 +1,5 @@
 
-//Exercise 5
+//Exercise 6
 
 function clickEvent(){
 	loss = false;
@@ -30,6 +30,7 @@ for(i=0; i < x.length; i++){
 function mouseOver() {
 	document.getElementById("start").onclick = function(){clickEvent()};
 	document.getElementById("end").onmouseover = function(){touchEnd()};
+	document.getElementById("maze").onmouseleave = function(){lossAlert()};
 	var y = document.querySelectorAll(".boundary");
 	var j;
 	for(j=0; j < y.length; j++){

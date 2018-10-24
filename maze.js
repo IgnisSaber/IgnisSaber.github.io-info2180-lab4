@@ -1,4 +1,15 @@
 
+//Exercise 4
+
+function clickEvent(){
+	loss = false;
+	var z = document.querySelectorAll(".boundary");
+	var k;
+	for(k=0; k < z.length; k++){
+		z[k].classList.remove("youlose");
+	}
+}
+
 //Exercise 3
 
 var loss = false;
@@ -15,7 +26,9 @@ for(i=0; i < x.length; i++){
 };
 
 //come baCK to this, Candice
+//I think I made a pun
 function mouseOver() {
+	document.getElementById("start").onclick = function(){clickEvent()};
 	document.getElementById("end").onmouseover = function(){touchEnd()};
 	var y = document.querySelectorAll(".boundary");
 	var j;

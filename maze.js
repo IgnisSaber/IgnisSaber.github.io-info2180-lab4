@@ -1,8 +1,9 @@
 
-//Exercise 4
+//Exercise 5
 
 function clickEvent(){
 	loss = false;
+	document.getElementById("status").textContent ="Another go!";
 	var z = document.querySelectorAll(".boundary");
 	var k;
 	for(k=0; k < z.length; k++){
@@ -10,22 +11,21 @@ function clickEvent(){
 	}
 }
 
-//Exercise 3
 
 var loss = false;
 
 function lossAlert(){
 loss = true;
+document.getElementById("status").textContent ="You lose";
 //alert(loss);
 var x = document.querySelectorAll(".boundary");
 var i;
 for(i=0; i < x.length; i++){
 	x[i].classList.add("youlose");
 	}
-//alert("You lost bro!");
 };
 
-//come baCK to this, Candice
+
 //I think I made a pun
 function mouseOver() {
 	document.getElementById("start").onclick = function(){clickEvent()};
@@ -40,23 +40,25 @@ function mouseOver() {
 
 
 
-//new function
-
-
-
 function touchEnd(){
-	if (loss===true){
-		alert("You lost... Nice try!");
-	}
-	else{
-		alert("You win, mate!");
+	if (loss===false){
+		document.getElementById("status").textContent ="You win";;
 	}
 };
 
 
 
-
 window.onload = mouseOver;
+
+//function touchEnd(){
+//	if (loss===true){
+//		alert("You lost... Nice try!");
+//	}
+//	else{
+//		alert("You win, mate!");
+//	}
+//};
+
 
 //Exercise 2
 //this function is fine
